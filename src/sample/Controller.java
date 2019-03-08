@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import sample.write.Reading;
+import sample.write.Writing;
 
 public class Controller {
 
@@ -18,13 +19,15 @@ public class Controller {
     private TextArea tarea_skriv;
 
     Reading readfile = new Reading();
+    Writing writing = new Writing();
 
 
 
     @FXML
     private void handleButtonAction(ActionEvent e){
         if(e.getSource()==btn_save){
-            System.out.println("save clicked");
+            System.out.println("save clicked "+tarea_skriv.getText());
+            writing.writeTo(tarea_skriv.getText(),"saves/test.txt");
         }
 
         if(e.getSource()==btn_open){
