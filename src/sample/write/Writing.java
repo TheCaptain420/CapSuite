@@ -10,7 +10,6 @@ public class Writing {
 
     public void writeTo(String input, String pathname){
 
-        String tidligereText = reading.readfile(pathname);
 
         try {
             fw = new FileWriter(pathname);

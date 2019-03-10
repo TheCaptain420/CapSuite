@@ -9,6 +9,8 @@ public class Reading {
     public String readfile(String pathname) {
         //"saves/test.txt"
         File file = new File(pathname);
+        File filescanner = new File("saves");
+        System.out.println(filescanner.listFiles());
 
         String finalString = "";
 
@@ -18,7 +20,7 @@ public class Reading {
             //scan line for line
             while (input.hasNextLine()) {
                 String line = input.nextLine();
-                finalString += "\n"+line;
+                finalString += line+"\n";
             }
             input.close();
         } catch (FileNotFoundException e) {
