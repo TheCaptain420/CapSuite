@@ -9,8 +9,7 @@ public class Reading {
     public String readfile(String pathname) {
         //"saves/test.txt"
         File file = new File(pathname);
-        File filescanner = new File("saves");
-        System.out.println(filescanner.listFiles());
+
 
         String finalString = "";
 
